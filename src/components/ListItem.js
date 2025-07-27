@@ -4,8 +4,9 @@ export class ListItem extends Component {
   setup(props) {
     function formatDate(date) {
       const day = String(date.getDate()).padStart(2, '0')
-      const month = String(date.getMonth()).padStart(2, '0')
-      const year = date.getFullYear()
+      let month = (date.getMonth() + 1)
+      month = String(month).padStart(2, '0')
+      const year = date.getFullYear() 
       const hours = String(date.getHours()).padStart(2, '0')
       const minutes = String(date.getMinutes()).padStart(2, '0')
       const seconds = String(date.getSeconds()).padStart(2, '0')
